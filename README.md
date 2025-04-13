@@ -83,6 +83,7 @@ class Book(models.Model):
      @classmethod
      def get_books_ordered_by_title(cls) -> QuerySet['Book']:
           return cls.objects.all().order_by('title')
+
 ```
 
 ---
@@ -138,6 +139,7 @@ sorted_books = Book.get_books_ordered_by_title()
 print("\n🔠제목순 정렬:")
 for book in sorted_books:
     print(book)
+
 ````
 
 ### 코드 설명
